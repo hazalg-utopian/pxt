@@ -1,53 +1,64 @@
-# Tutorials
 
-Step by step tutorials, like the "Getting Started" tutorial, are authored in markdown and automatically converted by the editor. This page describes the format for these tutorials.
+# Öğreticiler
 
-## How tutorials work
+Öğreticiler adım adım "Başlarken" öğreticisi gibi markdownda yazılmış ve metin düzenleyicisi tarafından otomatik şekilde dönüştürülmüştür. Bu sayfa bu öğreticiler için biçimi tanımlar.
 
-Tutorials help introduce block usage and for a target. Tutorials are selected from the  **Projects** dialog, under **Tutorials**. When a tutorial is chosen from here, it is run as a user interaction inside the editor. The tutorial progresses through a sequence of steps authored in a markdown document.
 
-Each step of the tutorial has a short description, or explanation, of the activity for the step and
-possibly a block example. If the step includes a block example, the editor will restrict the selection of blocks from the toolbox to only those used in the example. The other blocks are still
-shown but their selection is disabled during the step. This helps focus the interaction to just the
-blocks being described and ensures that the step is completed correctly.
+## Öğreticiler nasıl çalışır
 
-## Tutorial documents
+Öğreticiler blok kullanımını ve bir hedefi görüntülemeye yardımcı olur. Öğreticiler **Öğreticiler** altındaki **Projeler** penceresinden seçilir. Buradan bir öğretici seçildiği zaman metin düzenleyici içindeki bir kullanıcı etkileşimi olarak yürütülür. Öğretici bir markdown belgesinde yazılmış bir sıra adımdan geçerek ilerler.
 
-Tutorials are created as documents in the target's document tree, under _/docs/tutorials_. A tutorial with the title '**Light blaster**' would have a path like this: _/docs/tutorials/light-blaster.md_.
 
-When a tutorial is chosen in the editor, the tutorial runner converts the content of the tutorial markdown into user interactions. If selected from the help menu, a tutorial is viewed the same as any other help document.
+Öğreticinin her basamağının adım ve muhtemel bir öbek örneği için faaliyetin kısa bir tasviri ya da açıklaması vardır. Eğer adım bir öbek örneği içeriyorsa metin düzenleyicisi, yalnızca örnekte kullanılan araç kutusundaki blokların seçilimini bloklarla kısıtlayacaktır. Diğer bloklar yine de gösterilir fakat adım sırasında seçimler devre dışı bırakılır. Bu, etkileşimin sadece tanımlanan bloklara odaklanmasına yardımcı olur ve adımın doğru şekilde tamamlanmasını kesinleştirir.
 
-### ~ hint
 
-**A real example**
+## Öğretici belgeleri
 
-Learning by examples? See the source of an actual tutorial: [**getting-started.md**](https://github.com/Microsoft/pxt-microbit/blob/master/docs/tutorials/getting-started.md)
+Öğreticiler hedef belge ağacında dokümanlar olarak _/docs/tutorials_ dosyası altında oluşturulmuştur. '**Light blaster**' başlığıyla birlikte bir öğreticinin şunun gibi bir yolu olurdu: _/docs/tutorials/light-blaster.md_.
+
+
+Metin düzenleyicide bir öğretici seçildiği zaman öğretici çark, öğretici markdownun içeriğini kullanıcı etkileşimlerine dönüştürür. Eğer yardım menüsünden seçilirse bir öğretici herhangi bir yardım belgelesi ile aynı görüntülenir.
+
+
+### ~ ipucu
+
+
+**Gerçek bir örnek**
+
+Örnekler ile öğrenmek mi? Gerçek öğreticinin kaynağına bakın: [**getting-started.md**](https://github.com/Microsoft/pxt-microbit/blob/master/docs/tutorials/getting-started.md)
 
 ### ~
 
-### The 'Getting Started' tutorial
+### 'Başlarken' öğreticisi 
 
-The 'Getting Started' tutorial is special tutorial that is linked to a **Getting Started** button shown in the **BLOCKS** view of the editor. This tutorial is written to give a simple, first time introduction to using blocks in the editor.
+'Başlarken' öğreticisi metin düzenleyicinin **BLOKLAR** görünümünde gösterilen **Başlarken** tuşuyla bağlantılı özel bir öğreticidir. Bu öğretici metin düzenleyicide blokları kullanmak üzere basit bir ilk sefer girişi vermek için yazılır.
 
-If the editor has the **Getting Started** button (enabled in [pxtarget.json](/targets/pxtarget) with
-```"sideDoc": "tutorials/getting-started"```), the tutorial linked to it is retrieved from _/docs/tutorials/getting-started.md_.
+Eğer düzenleyicide **Başlarken** tuşu (enabled in [pxtarget.json](/targets/pxtarget) ```"sideDoc": "tutorials/getting-started"```) ile etkinleştirilmişse öğretici bağlantısı _/docs/tutorials/getting-started.md_ adresinden alınır.
 
-### Adding tutorials
+### Öğreticileri ekleme
 
-You can create other tutorials besides 'Getting Started'. The other tutorial choices show up in the tutorials dialog using an entry in _/docs/tutorials.md_. The entry has these settings:
+'Başlarken'in dışında başka öğreticiler yaratabilirsiniz. Diğer öğretici tercihleri,  _/docs/tutorials.md_. dosyasındaki bir girişi kullanarak öğreticiler penceresinde gösterilir.
 
-* **name**: tutorial name
-* **imageUrl**: an optional icon image
-* **url**: tutorial document path
-* **cardType**: set to "tutorial"
-* **description**: description of what the tutorial does
+* **name**: öğretici adı
 
-Here's an example entry in _tutorials.md_:
+* **imageUrl**: isteğe bağlı bir ikon görünümü
+
+* **url** öğretici belge izi
+
+* **cardType**: "öğretici"ye ayarla
+
+* **description**: öğreticinin ne yaptığının tanımı
+
+
+İşte _tutorials.md_ dosyasındaki bir örnek giriş:
 
 ````markdown
-# Tutorials
 
-## Fun stuff
+# Öğreticiler
+
+## Eğlence kısmı
+
+
 
 ```codecard
 [{
@@ -62,7 +73,7 @@ Here's an example entry in _tutorials.md_:
 ```
 ````
 
-The tutorial document tree has this layout:
+Öğretici belge ağacının bu anahat düzeni vardır:
 
 ```
 /docs/tutorials.md
@@ -70,100 +81,110 @@ The tutorial document tree has this layout:
 /docs/tutorials/light-blaster.md
 ...
 ```
+## Biçim
 
-## Format
+Öğretici markdownun öğretici çarkının bir seri etkileşim oluşturmasına yön veren bir biçimi vardır:
 
-The tutorial markdown has a format that the guides the tutorial runner in making a sequence of interactions: 
+### Başlık
 
-### Title
-
-The title is on the first line and uses a _level 1_ heading, like:
+Birinci satırdaki başlık ve aşağıdaki gibi bir _level 1_ başlık kullanıyor:
 
 ```text
 # Light blaster
 ```
 
-### Steps
+### Adımlar
 
-A tutorial follows a sequence of simple steps. The runner builds an interaction from each _step_ section. A step begins with a _level 2_ heading (``##``) and can have any text. It's common, though, to use the _Step 1, Step 2,...Step n_ sequence for each heading. Something like:
+Bir öğretici basit adımların bir dizisini takip eder. Çark, her bir _step_ bölümünden bir etkileşim kurar. Bir adım bir _level 2_ başlık (``##``) ile başlar ve herhangi bir metin içerebilir. Yine de,her başlık için _Step 1, Step 2,...Step n_ dizisi kullanmak yaygındır. Bunun gibi:
 
 ```markdown
-## Step 1
+## 1. Adım
 
-Instructions for step 1 here...
+1. adım için talimatlar burada...
 
-## Step 2
+## 2. Adım
 
-Instructions for step 2 here...
+2. adım için talimatlar burada...
 
-## Step 3
+## 3. Adım
 
-Instructions for step 3 here...
+3. adım için talimatlar burada...
 ```
 
-The text in the heading is shown only when the turtorial is viewed as a help page. It's ok to have additional text in the heading. The word 'Step' can even be left out since the tutorial runner will build the list of steps only from the content under the heading tag, ``##``. These are valid headings:
+Başlıktaki metin sadece öğretici yardım sayfası olarak görüntülendiğinde gösterilir. Başlıkta ek metin olmasında sorun yok. Öğretici çarkı sadece başlık etiketi altındaki içerikten adımlar listesini oluşturacağından 'Adım' kelimesi bile dışarıda bırakılabilir ``##``. Bunlar geçerli başlıklar:
+
+
 
 ```markdown
-### Step 3: Make a new variable
+### 3. Adım: Yeni bir değişken oluşturun
 ```
 
 >--or--
 
 ```markdown
-## Flash all the LEDs on and off twice
+## Tüm LEDleri iki kere açıp kapat
 ```
 
-The editor automatically parses the markdown and populates the user interface from each step section.
+Metin düzenleyici otomatik biçimde markdownu çözümler ve her adım bölümünden kullanıcı arayüzünü doldurur.
 
-In each step, just the first paragraph is displayed to the user in the tutorial caption. The complete text, block examples, etc. are displayed in the ``hint`` dialog when the user clicks the caption or hint button. If you include code snippets, images or videos, they are shown in the hint view also.
+Her adımda öğretici başlığında yalnızca ilk paragraf kullanıcıya görüntülenir. Kullanıcı başlık ya da ipucu tuşuna tıkladığı zaman tam metin,öbek örnekleri,vb. ``hint`` penceresinde gösterilir. Eğer kod parçalarını,görselleri ya da videoları eklerseniz ipucu görünümünde de gösterilirler.
 
-### ~ hint
 
-**Simple, short descriptions**
+### ~ ipucu
 
-During an interaction, the first paragraph of the step description is shown in the caption. If the paragraph length goes beyond the display length of caption, a scroll bar appears in order to view the rest of the paragraph. It's best to keep the paragraph short enough to so all of it appears in the caption without requiring the user to scroll to see it all. If your instructions need more text, you can just create an additional step to split up the activity.
+**Basit, kısa tanımlar**
+
+Bir etkileşim esnasında adım tanımının ilk paragrafı başlığın içinde sergilenir. Eğer paragraf uzunluğu resim yazısı uzunluğununun gösterimini aşarsa paragrafın kalanını görüntülemek için bir kaydırma çubuğu belirir. En iyisi paragrafı yeteri kadar kısa tutmaktır ki böylece tamamı kullanıcının hepsini görüntülemek için kaydırmasını gerektirmeden başlıkta görünür. Talimatlarınız daha fazla metin gerektirirse faaliyeti bölmek için sadece ek bir adım yaratabilirsiniz.
+
+
+
 
 ### ~
 
-### Fullscreen
+### Tam ekran
 
-If you want to include a dramatic introduction or make certain that a special message is seen, you can use the ``@fullscreen`` tag. This is usually placed in the first section of the tutorial document. The section is displayed in an overlay window on top of the tutorial screen and isn't shown in the caption as part of the tutorial flow. You include it in your tutorial like this:
+Eğer dramatik bir tanıtım eklemek isterseniz ya da özel bir mesajın görüldüğünü kesinleştirirseniz ``@ fullscreen`` etiketini kullanabilirsiniz. Bu genellikle öğretici belgenin ilk ksımına yerleştirilir. Bölüm, öğretici ekranın üstündeki bir yardımcı pencerede görüntülenir ve öğretici akışının parçası olarak simge yazısının içinde gösterilmez. Öğreticinizin kapsamına şu şekilde alırsınız:
 
 ```markdown
 # Flash-a-rama
 
-## It's time to code! @fullscreen
+## Kodlama zamanı! @fullscreen
 
-Let's get real bright. We're going to make all the lights flash on your board!
+Gerçekten parlak olalım. Devre kartınızdaki tüm ışıkları yanıp söndüreceğiz!
 
 ![Flash lights](/static/tutorials/lights-flashing.gif)
 
-## Step 1: Make a new variable
 
+## 1. Adım: Yeni bir değişken oluşturun
 ...
 ```
 
-## Example
 
-The following sample shows a simple 2 step tutorial.
+## Örnek
+
+
+Takip eden örnek basit bir 2 adımlı öğreticiyi gösterir.
 
 ````markdown
-# Getting started
 
-## Step 1
+# Başlarken
 
-Welcome! Place the ``||basic:show string||`` block in the ``||basic:on start||`` slot to scroll your name.
+## 1. Adım
+
+
+Hoşgeldiniz! Adınızı kaydırmak için ``||basic: on start||`` sırasındaki `` ||basic: show string||`` öbeğini yerleştirin.
 
 ```blocks
 basic.showString("Micro!")
 ```
 
 ## Step 2
+## 2. Adım
 
-Click ``|Download|`` to transfer your code in your @boardname@!
 
+@ boardname@ adresinizdeki kodunuzu aktarmak için ``|Download|`` tıklayın.
 ````
 
-## Translations
+## Çeviriler
 
-Tutorials are translated via [Crowdin](/translate) like any other documentation page.
+Öğreticiler [Crowdin] (/translate) yoluyla herhangi diğer belge sayfaları gibi tercüme edilir.
